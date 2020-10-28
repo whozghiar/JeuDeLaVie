@@ -1,11 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #define TailleMatrice 10
+
+void init_planeur(int matrice[][TailleMatrice]){
+    int i,j;
+    for (i=0; i < TailleMatrice;i++ ){
+        for (j=0;j<TailleMatrice;j++){
+            matrice[i][j]=0;
+        }
+    }
+    matrice[1][2]=1;
+    matrice[2][1]=1;
+    matrice[2][2]=1;
+}
+
 
 void init_hasard(int matrice[][TailleMatrice]){
     int i,j,alea;
-    for (i = 1; i < TailleMatrice-1 ; i++ ){
-        for (j = 1; j < TailleMatrice-1 ; i++){
+    srand(time(NULL));
+    for (i = 0; i < TailleMatrice ; i++ ){
+        for (j = 0; j < TailleMatrice ; j++){
             if ((i==0) || (j==0) || (i==TailleMatrice-1) || (j==TailleMatrice-1)){
                 matrice [i][j]=0;
             }
@@ -24,21 +39,22 @@ void affiche_ligne(int ligne){
     printf("-\n");
 }
 
+
 void affichage(int matrice[][TailleMatrice]){
     int i,j;
-    for (i = 1; i <= TailleMatrice; i++){
-        affiche_ligne(TailleMatrice);
-        for (j = 1; j <= TailleMatrice ; j++){
+    for (i = 1 ; i < TailleMatrice-1; i++){
+        affiche_ligne(TailleMatrice-2);
+        for (j = 1; j < TailleMatrice-1 ; j++){
             if (matrice[i][j]==1){
                 printf("|V");
             }
             else{
                 printf("|M");
             }
-        printf("|\n");
         }
+        printf("|\n");
     }
-    affiche_ligne(TailleMatrice);
+    affiche_ligne(TailleMatrice-2);
 }
 
 
