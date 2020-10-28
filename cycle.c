@@ -3,7 +3,7 @@
 #define TailleMatrice 10 
 
 void cycle(int matrice[][TailleMatrice]) {
-
+    
     int i,j, nbVoisin;
     int copieMatrice[TailleMatrice][TailleMatrice];
     for(i=0;i<TailleMatrice;i++){
