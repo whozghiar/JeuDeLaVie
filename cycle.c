@@ -15,11 +15,12 @@ void cycle(int matrice[][TailleMatrice]) {
     for(i=1;i<TailleMatrice-1;i++){
         for(j=1;j<TailleMatrice-1;j++){
             nbVoisin=compte_voisin(matrice,i,j);
-            if((matrice[i][j]))
+            if(((matrice[i][j]==1)&&(nbVoisin==2))||(nbVoisin==3)){
+                matrice[i][j]=1;
+            }
+            else{
+                matrice[i][j]=0;
+            }
         }
-    }
-
-    
-
-   
+    }   
 }
