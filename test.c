@@ -35,7 +35,6 @@ void init_hasard(int matrice[][TailleMatrice]){
 void affichage(int matrice[][TailleMatrice]){
     int i,j;
     for (i = 1 ; i < TailleMatrice-1; i++){
-
         for (j = 1; j < TailleMatrice-1 ; j++){
             if (matrice[i][j]==1){
                 printf(" V");
