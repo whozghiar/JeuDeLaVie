@@ -76,11 +76,9 @@ void affichage(int matrice[][TailleMatrice]){
 
 int compte_voisin(int matrice[][TailleMatrice], int L, int C) {
     int resultat;
-    printf("Test12\n");
     resultat=matrice[L-1][C-1] + matrice[L-1][C] + matrice[L-1][C+1] +
     matrice[L][C-1] + matrice[L][C+1] + matrice[L+1][C-1] + matrice [L+1][C] 
     + matrice[L+1][C+1];
-    printf("Test13\n");
     return resultat;
 }
 
@@ -88,25 +86,19 @@ void cycle(int matrice[][TailleMatrice]) {
     
     int i,j, nbVoisin;
     int copieMatrice[TailleMatrice][TailleMatrice];
-    printf("Test5\n");
     for(i=0;i<TailleMatrice;i++){
-        for(j=0;j<TailleMatrice;i++){
+        for(j=0;j<TailleMatrice;j++){
             copieMatrice[i][j]=matrice[i][j];
         }
     }
-    printf("Test7\n");
     for(i=1;i<TailleMatrice-1;i++){
         for(j=1;j<TailleMatrice-1;j++){
-            printf("Test8\n");
             nbVoisin=compte_voisin(copieMatrice,i,j);
-            printf("Test9\n");
             if(((matrice[i][j]==1)&&(nbVoisin==2))||(nbVoisin==3)){
                 matrice[i][j]=1;
-                printf("Test10\n");
             }
             else{
                 matrice[i][j]=0;
-                printf("Test11\n");
             }
         }
     }   
@@ -128,17 +120,13 @@ int main(){
     
     printf("Affichage au debut\n");
     affichage(matrice);
-
+    printf("Cycle suivant\n");
     C='\n';
     while(C=='\n'){
-        printf("Test1");
         cycle(matrice);
-        printf("Test2");
         affichage(matrice);
-        printf("Test3");
-        printf("Appuyez sur ENTER pour continuer, pour s'arreter appuyez sur une autre touche puis ENTER");
+        printf("Appuyez sur ENTER pour continuer, pour s'arreter appuyez sur une autre touche puis ENTER\n");
         scanf("%c",&C);
-        printf("Test4");
     }
     return 0;
 }

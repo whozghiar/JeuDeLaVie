@@ -7,7 +7,7 @@ void cycle(int matrice[][TailleMatrice]) {
     int i,j, nbVoisin;
     int copieMatrice[TailleMatrice][TailleMatrice];
     for(i=0;i<TailleMatrice;i++){
-        for(j=0;j<TailleMatrice;i++){
+        for(j=0;j<TailleMatrice;j++){
             copieMatrice[i][j]=matrice[i][j];
         }
     }
