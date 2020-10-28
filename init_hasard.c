@@ -15,5 +15,5 @@ void init_hasard(int matrice[][TailleMatrice]){
             }
         }
     }
-
+}
     
