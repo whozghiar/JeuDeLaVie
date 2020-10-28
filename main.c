@@ -66,10 +66,10 @@ void affichage(int matrice[][TailleMatrice]){
     for (i = 1 ; i < TailleMatrice-1; i++){
         for (j = 1; j < TailleMatrice-1 ; j++){
             if (matrice[i][j]==1){
-                printf(" V");
+                printf(" *");
             }
             else{
-                printf(" M");
+                printf(" .");
             }
         }
         printf(" \n");
@@ -120,7 +120,7 @@ int main(){
     if(Model==3)
         init_hasard(matrice);
     
-    printf("Affichage au debut\n");
+    printf("Affichage au debut (Vivant = * ) \n");
     affichage(matrice);
     printf("Cycle suivant\n");
     C='\n';

@@ -9,10 +9,10 @@ void affichage(int matrice[][TailleMatrice]){
     for (i = 1 ; i < TailleMatrice-1; i++){
         for (j = 1; j < TailleMatrice-1 ; j++){
             if (matrice[i][j]==1){
-                printf(" V");
+                printf(" *");
             }
             else{
-                printf(" M");
+                printf(" .");
             }
         }
         printf(" \n");
