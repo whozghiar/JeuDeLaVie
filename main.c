@@ -90,7 +90,7 @@ void cycle(int matrice[][TailleMatrice]) {
     int copieMatrice[TailleMatrice][TailleMatrice];
     printf("Test5\n");
     for(i=0;i<TailleMatrice;i++){
-        for(j=0;j<TailleMatrice;i++){
+        for(j=0;j<TailleMatrice;j++){
             copieMatrice[i][j]=matrice[i][j];
         }
     }

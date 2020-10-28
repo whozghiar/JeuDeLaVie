@@ -11,6 +11,8 @@ void init_planeur(int matrice[][TailleMatrice]){
         }
     }
     matrice[1][2]=1;
-    matrice[2][1]=1;
-    matrice[2][2]=1;
+    matrice[2][3]=1;
+    matrice[3][1]=1;
+    matrice[3][2]=1;
+    matrice[3][3]=1;
 }
