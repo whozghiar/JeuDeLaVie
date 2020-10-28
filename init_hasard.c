@@ -3,6 +3,17 @@
 #include <time.h>
 #define TailleMatrice 10 
 
+/** 
+ * La fonction init_hasard permet d'initialiser au hasard la matrice.
+ * 
+ * @param matrice une matrice qui contient des entiers, de taille TailleMatrice
+ * 
+ * Elle initialise des coordonnées de la matrice de manière aléatoire provoquant ainsi un résultat innatendu.  
+ * 
+ * Cette fonction ne retourne rien. 
+*/
+
+
 void init_hasard(int matrice[][TailleMatrice]){
     int i,j,alea;
     srand(time(NULL));
