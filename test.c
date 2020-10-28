@@ -31,14 +31,6 @@ void init_hasard(int matrice[][TailleMatrice]){
     }
 }
 
-void affiche_ligne(int ligne){
-    int k;
-    for (k = 0 ; k < ligne; k++){
-        printf("--");
-    }
-    printf("-\n");
-}
-
 
 void affichage(int matrice[][TailleMatrice]){
     int i,j;
