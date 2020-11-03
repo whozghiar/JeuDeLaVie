@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#define TailleMatrice 10 
+#include "main.h"
 
 /** 
  * La fonction compte_voisin renvoie la variable resultat, un entier, qui est obtenue en calculant le nombre de voisin d'une cellule. 
@@ -15,11 +13,10 @@
  * @return resultat, un entier qui contient le nombre de voisin de la cellule
 */
 
-int compte_voisin(int matrice[][TailleMatrice], int L, int C) { 
+int compte_voisin(int matrice[][TailleMatrice], int L, int C) {
     int resultat;
     resultat=matrice[L-1][C-1] + matrice[L-1][C] + matrice[L-1][C+1] +
     matrice[L][C-1] + matrice[L][C+1] + matrice[L+1][C-1] + matrice [L+1][C] 
-    + matrice[L+1][C+1]; 
-    
-    return resultat; 
+    + matrice[L+1][C+1];
+    return resultat;
 }

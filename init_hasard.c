@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#define TailleMatrice 10 
+#include "main.h"
 
 /** 
  * La fonction init_hasard permet d'initialiser au hasard la matrice.
@@ -12,7 +9,6 @@
  * 
  * Cette fonction ne retourne rien. 
 */
-
 
 void init_hasard(int matrice[][TailleMatrice]){
     int i,j,alea;
@@ -28,4 +24,3 @@ void init_hasard(int matrice[][TailleMatrice]){
         }
     }
 }
-    

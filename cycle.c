@@ -1,9 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#define TailleMatrice 10 
+#include "main.h"
 
 /** 
- * La fonction compte_voisin renvoie la variable resultat, un entier, qui est obtenue en calculant le nombre de voisin d'une cellule. 
+ * La fonction cycle permet de faire une mise a jour du jeu. 
  * 
  * @param matrice une matrice qui contient des entiers, de taille TailleMatrice
  * 
@@ -24,7 +22,6 @@ void cycle(int matrice[][TailleMatrice]) {
             copieMatrice[i][j]=matrice[i][j];
         }
     }
-    
     for(i=1;i<TailleMatrice-1;i++){
         for(j=1;j<TailleMatrice-1;j++){
             nbVoisin=compte_voisin(copieMatrice,i,j);
@@ -37,3 +34,4 @@ void cycle(int matrice[][TailleMatrice]) {
         }
     }   
 }
+

@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-#define TailleMatrice 10 
+#include "main.h"
 
 /** 
  * La fonction init_planeur permet d'initialiser un planeur dans la matrice.
@@ -12,7 +9,6 @@
  * 
  * Cette fonction ne retourne rien. 
 */
-
 
 void init_planeur(int matrice[][TailleMatrice]){
     int i,j;

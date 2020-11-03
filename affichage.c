@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-#define TailleMatrice 10 
-
+#include "main.h"
 
 /** 
  * La fonction affichage permet d'afficher les cellule d'une matrice dans laquelle le jeu va se dérouler.
@@ -29,5 +25,4 @@ void affichage(int matrice[][TailleMatrice]){
         printf(" \n");
     }
 }
-
 
